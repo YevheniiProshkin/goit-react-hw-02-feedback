@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import { Wrapper } from 'components/Section/Section.styled';
+import { Container } from 'components/Section/Section.styled';
 
 export default function Section({ title, children }) {
   return (
-    <Wrapper>
+    <Container>
       <h2>{title}</h2>
       {children}
-    </Wrapper>
+    </Container>
   );
 }
 

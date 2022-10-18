@@ -27,7 +27,7 @@ export class App extends Component {
     bad: 0,
   };
 
-  onButtonClick = feedback => {
+  onBtnClick = feedback => {
     if (feedback === 'good') {
       this.setState({ good: this.state.good + 1 });
     }
@@ -56,7 +56,7 @@ export class App extends Component {
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
             options={Object.keys(this.state)}
-            onLeaveFeedback={this.onButtonClick}
+            onLeaveFeedback={this.onBtnClick}
           />
         </Section>
         <Section title={'Statistics'}>
