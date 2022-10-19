@@ -16,11 +16,6 @@ export const Button = styled.button`
 
   :hover {
     background: #72b3a5;
-    box-shadow: 6px 6px 2px 1px #f3f2f5;
+    box-shadow: 6px 6px 2px 1px rgba(245, 250, 242, 0.9);
   }
-
-  // :focus {
-  //   background: #72b3a5;
-  //   box-shadow: 6px 6px 2px 1px #f3f2f5;
-  // }
 `;

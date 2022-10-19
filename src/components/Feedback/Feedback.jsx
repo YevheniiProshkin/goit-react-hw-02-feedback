@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import { Button } from './Feedback.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  const onBtnClick = e => {
-    onLeaveFeedback(e.target.dataset.name);
+  const onBtnClick = evt => {
+    onLeaveFeedback(evt.target.dataset.name);
   };
   return (
     <div>
