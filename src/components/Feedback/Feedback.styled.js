@@ -16,6 +16,7 @@ export const Button = styled.button`
 
   :hover {
     background: #72b3a5;
-    box-shadow: 6px 6px 2px 1px rgba(245, 250, 242, 0.9);
+    box-shadow: 1px 2px 80px 5px rgba(184, 222, 224, 1);
+    color: #031233;
   }
 `;
