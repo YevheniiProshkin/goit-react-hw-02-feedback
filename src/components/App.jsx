@@ -27,17 +27,44 @@ export class App extends Component {
     bad: 0,
   };
 
-  onBtnClick = feedback => {
-    if (feedback === 'good') {
-      this.setState({ good: this.state.good + 1 });
-    }
-    if (feedback === 'neutral') {
-      this.setState({ neutral: this.state.neutral + 1 });
-    }
-    if (feedback === 'bad') {
-      this.setState({ bad: this.state.bad + 1 });
-    }
-  };
+  onBtnClick = feedback =>
+    this.setState(prev => {
+      return { [feedback]: prev[feedback] + 1 };
+    });
+
+  // --- Працюючий варіант!
+
+  // onBtnClick = feedback => {
+  //   if (feedback === 'good') {
+  //     this.setState(prev => {
+  //       return { good: prev.good + 1 };
+  //     });
+  //   }
+  //   if (feedback === 'neutral') {
+  //     this.setState(prev => {
+  //       return { neutral: prev.neutral + 1 };
+  //     });
+  //   }
+  //   if (feedback === 'bad') {
+  //     this.setState(prev => {
+  //       return { bad: prev.bad + 1 };
+  //     });
+  //   }
+  // };
+
+  // --- B this.setState ми не звертаєся напряму до стейту!
+
+  // onBtnClick = feedback => {
+  //   if (feedback === 'good') {
+  //     this.setState({ good: this.state.good + 1 });
+  //   }
+  //   if (feedback === 'neutral') {
+  //     this.setState({ neutral: this.state.neutral + 1 });
+  //   }
+  //   if (feedback === 'bad') {
+  //     this.setState({ bad: this.state.bad + 1 });
+  //   }
+  // };
 
   countTotalFeedback = () => {
     return this.state.good + this.state.neutral + this.state.bad;
